@@ -10,5 +10,13 @@ class Chitter < Sinatra::Base
     'Welcome, you Chitter-er'
   end
 
+  get '/chits' do
+    @chits = ["Look ma, I'm chitting", 
+      "Listen here, you little chit...",
+      "Chitty, chitty, bang, bang"
+    ]
+    erb :'chits/chits'
+  end
+
   run! if app_file == $0
 end
