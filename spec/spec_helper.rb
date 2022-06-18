@@ -5,6 +5,8 @@ require 'simplecov'
 require 'simplecov-console'
 require_relative '../app'
 require './lib/chit'
+require_relative './setup_test_database'
+require 'database_helpers'
 
 ENV['ENVIRONMENT'] = 'test'
 
