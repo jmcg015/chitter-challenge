@@ -1,5 +1,6 @@
 require "sinatra/base"
 require "sinatra/reloader"
+require './lib/chit'
 
 class Chitter < Sinatra::Base
   configure :development do
@@ -11,10 +12,7 @@ class Chitter < Sinatra::Base
   end
 
   get '/chits' do
-    @chits = ["Look ma, I'm chitting", 
-      "Listen here, you little chit...",
-      "Chitty, chitty, bang, bang"
-    ]
+    @chits = Chit.all
     erb :'chits/chits'
   end
 

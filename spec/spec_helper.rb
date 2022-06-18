@@ -4,6 +4,7 @@ require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 require_relative '../app'
+require './lib/chit'
 
 ENV['ENVIRONMENT'] = 'test'
 
